@@ -16,7 +16,9 @@ export default function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo_faci_ne.png"
-              alt="Logo Forkliftec Panamá"
+              alt="Logo FaciRepuestos Colombia"
+              width={120}
+              height={48}
               className="h-12 w-auto object-contain"
               onError={(e) => {
                 e.currentTarget.style.display = "none";

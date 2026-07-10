@@ -28,6 +28,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         <img
           src={product.image}
           alt={product.title}
+          width={400}
+          height={300}
           className="w-full h-full object-cover"
           style={{
             transition: "transform 300ms cubic-bezier(0.4, 0, 0.2, 1)",

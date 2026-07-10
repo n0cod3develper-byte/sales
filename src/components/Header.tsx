@@ -45,6 +45,8 @@ export default function Header() {
           <img
             src="/logo.png"
             alt="Logo Faci Repuestos"
+            width={120}
+            height={48}
             className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-102"
             onError={(e) => {
               // Fallback SVG in case image fails to load

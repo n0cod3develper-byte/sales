@@ -309,6 +309,8 @@ export default function Home() {
                 <img 
                   src={brand.logo} 
                   alt={`Logotipo oficial de ${brand.name}`} 
+                  width={200}
+                  height={100}
                   loading="lazy"
                   className="max-w-full max-h-full object-contain filter grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-105"
                 />

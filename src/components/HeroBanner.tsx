@@ -44,7 +44,7 @@ export default function HeroBanner() {
   };
 
   return (
-    <div className="relative w-full h-[500px] md:h-[650px] overflow-hidden bg-gray-900 select-none">
+    <div className="relative w-full h-[500px] md:h-[650px] overflow-hidden bg-gray-900 select-none" style={{ aspectRatio: "16/9" }}>
       {/* Slides */}
       {slides.map((slide, idx) => (
         <div
