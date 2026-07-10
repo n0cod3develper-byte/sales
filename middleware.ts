@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyJwt } from '@/lib/auth';
+import { verifyJwt } from '@/lib/jwt';
 
 export async function middleware(request: NextRequest) {
   const authHeader = request.headers.get('authorization');
