@@ -49,18 +49,18 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="#nosotros" className="hover:text-[#d32f2f] transition-colors">
+              <Link href="/nosotros" className="hover:text-[#d32f2f] transition-colors">
                 Quiénes Somos
               </Link>
             </li>
          
             <li>
-              <Link href="#blog" className="hover:text-[#d32f2f] transition-colors">
+              <Link href="/blog" className="hover:text-[#d32f2f] transition-colors">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="#contacto" className="hover:text-[#d32f2f] transition-colors">
+              <Link href="/contacto" className="hover:text-[#d32f2f] transition-colors">
                 Contáctenos
               </Link>
             </li>

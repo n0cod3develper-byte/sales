@@ -71,7 +71,7 @@ export default function Header() {
             Inicio
           </Link>
           <Link
-            href="#nosotros"
+            href="/nosotros"
             className="px-4 py-2 text-sm font-semibold text-gray-800 hover:text-[#d32f2f] hover:bg-gray-50 rounded-lg transition-all duration-200"
           >
             Nosotros
@@ -87,7 +87,7 @@ export default function Header() {
               {products.map((prod) => (
                 <Link
                   key={prod.id}
-                  href={`#productos-${prod.slug}`}
+                  href={`/productos#${prod.slug}`}
                   className="block px-5 py-2.5 text-xs font-medium text-gray-700 hover:text-[#d32f2f] hover:bg-gray-50 transition-colors duration-200"
                 >
                   {prod.title}
@@ -97,13 +97,13 @@ export default function Header() {
           </div>
 
          <Link
-            href="#blog"
+            href="/blog"
             className="px-4 py-2 text-sm font-semibold text-gray-800 hover:text-[#d32f2f] hover:bg-gray-50 rounded-lg transition-all duration-200"
           >
             Blog
           </Link>
           <Link
-            href="#contacto"
+            href="/contacto"
             className="ml-2 px-5 py-2 text-sm font-semibold text-white bg-[#d32f2f] hover:bg-red-700 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
           >
             Contacto
@@ -135,7 +135,7 @@ export default function Header() {
             Inicio
           </Link>
           <Link
-            href="#nosotros"
+            href="/nosotros"
             onClick={() => setIsOpen(false)}
             className="block py-2 text-base font-semibold text-gray-800 hover:text-[#d32f2f]"
           >
@@ -164,7 +164,7 @@ export default function Header() {
               {products.map((prod) => (
                 <Link
                   key={prod.id}
-                  href={`#productos-${prod.slug}`}
+                  href={`/productos#${prod.slug}`}
                   onClick={() => setIsOpen(false)}
                   className="block py-1 text-sm font-medium text-gray-600 hover:text-[#d32f2f]"
                 >
@@ -175,14 +175,14 @@ export default function Header() {
           </div>
 
           <Link
-            href="#blog"
+            href="/blog"
             onClick={() => setIsOpen(false)}
             className="block py-2 text-base font-semibold text-gray-800 hover:text-[#d32f2f]"
           >
             Blog
           </Link>
           <Link
-            href="#contacto"
+            href="/contacto"
             onClick={() => setIsOpen(false)}
             className="block text-center py-3 text-base font-bold text-white bg-[#d32f2f] hover:bg-red-700 rounded-lg shadow-md transition-colors"
           >

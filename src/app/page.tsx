@@ -105,7 +105,7 @@ export default function Home() {
           </p>
           <div className="pt-4">
             <a
-              href="#contacto"
+              href="/contacto"
               className="inline-flex items-center gap-2 px-8 py-3.5 text-xs md:text-sm font-bold text-white bg-[#d32f2f] hover:bg-red-700 rounded-lg shadow-lg hover:shadow-red-500/20 hover:-translate-y-0.5 transition-all duration-300"
             >
               <span>COTIZAR REPUESTOS</span>
@@ -158,7 +158,7 @@ export default function Home() {
               </p>
             </div>
             <a
-              href="#contacto"
+              href="/contacto"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               style={{ background: "linear-gradient(135deg, #e2b93b 0%, #d4a82e 100%)", color: "#1a1a2e" }}
             >
@@ -213,10 +213,9 @@ export default function Home() {
               <div className="w-16 h-1 bg-[#d32f2f] rounded"></div>
               <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
                 Facirepuestos S.A.S. es una empresa colombiana legalmente constituida, nacida con el firme propósito de consolidarse como el aliado estratégico número uno en el suministro de partes, piezas e insumos automotrices para maquinaria de carga y elevación. Con sede operativa en la ciudad de Medellín, atendemos de manera integral las necesidades de empresas del sector logístico, centros de distribución, bodegas industriales y talleres de mantenimiento técnico. Nuestra filosofía de negocio se fundamenta en la comprensión absoluta de la cadena de suministro: entendemos que un montacargas o un elevador detenido no representa únicamente una falla mecánica, sino un cuello de botella logístico que genera altos costos de inactividad (downtime). Por ello, respondemos con agilidad, precisión y un catálogo de calidad garantizada.
-              </p>
-              <div className="pt-2">
+              </p>                <div className="pt-2">
                 <a
-                  href="#contacto"
+                  href="/contacto"
                   className="px-6 py-3 text-xs md:text-sm font-bold text-white bg-gray-900 hover:bg-[#d32f2f] rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   CONTACTAR AHORA
@@ -306,12 +305,12 @@ export default function Home() {
                 <div className="p-6 space-y-4">
                   <span className="text-gray-400 text-[10px] font-bold uppercase">{item.date}</span>
                   <h4 className="text-gray-900 font-extrabold text-sm md:text-base tracking-tight leading-snug hover:text-[#d32f2f] transition-colors">
-                    <a href="#blog">{item.title}</a>
+                    <a href="/blog">{item.title}</a>
                   </h4>
                   <p className="leading-relaxed" style={{ fontSize: "0.8rem", color: "#4b5563" }}>{item.excerpt}</p>
                 </div>
                 <div className="p-6 pt-0 border-t border-gray-50 flex items-center justify-between">
-                  <a href="#blog" className="text-xs font-black text-[#d32f2f] hover:underline">
+                  <a href="/blog" className="text-xs font-black text-[#d32f2f] hover:underline">
                     LEER MÁS
                   </a>
                 </div>
