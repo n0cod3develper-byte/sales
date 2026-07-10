@@ -4,6 +4,7 @@ import "./globals.css";
 
 import type { Viewport } from "next";
 import { JsonLdOrganization, JsonLdBreadcrumbList } from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body className="antialiased">
         <JsonLdOrganization />
         <JsonLdBreadcrumbList />
+        <GoogleAnalytics />
         <main id="main-content">{children}</main>
       </body>
     </html>
