@@ -9,7 +9,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Missing or invalid Authorization header' }, { status: 401 });
     }
     const token = authHeader.split(' ')[1];
-    const payload = verifyJwt(token) as { id: string };
+    const payload = (await verifyJwt(token)) as { id: string };
     const user = await prisma.user.findUnique({
       where: { id: payload.id },
       select: { id: true, email: true, name: true },

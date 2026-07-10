@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest) {
   }
   const token = authHeader.split(' ')[1];
   try {
-    const payload = verifyJwt(token) as { id: string };
+    const payload = (await verifyJwt(token)) as { id: string };
     // Attach user id to request headers for downstream handlers
     request.headers.set('x-user-id', payload.id);
     return NextResponse.next();
