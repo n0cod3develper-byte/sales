@@ -3,7 +3,7 @@ WORKDIR /app
 
 # Install dependencies (only package.json needed for caching)
 COPY package.json package-lock.json ./
-RUN npm ci --omit=dev
+RUN npm ci
 
 # Copy source code
 COPY . .
