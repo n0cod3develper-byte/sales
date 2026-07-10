@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import type { Viewport } from "next";
+import { JsonLdOrganization, JsonLdBreadcrumbList } from "@/components/JsonLd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,7 +56,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es_CO" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <JsonLdOrganization />
+        <JsonLdBreadcrumbList />
+        {children}
+      </body>
     </html>
   );
 }

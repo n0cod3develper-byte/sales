@@ -8,6 +8,7 @@ import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { services, products, blogItems, brands, companyInfo } from "@/lib/data";
+import { JsonLdProduct } from "@/components/JsonLd";
 import { Phone, MessageSquare, Send, CheckCircle } from "lucide-react";
 
 export default function Home() {
@@ -41,6 +42,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-800 scroll-smooth">
+      {/* JSON-LD Structured Data for Products */}
+      {products.map((prod) => (
+        <JsonLdProduct key={prod.slug} product={prod} />
+      ))}
+
       <TopBar />
       <Header />
       <HeroBanner />
