@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
+import { sendContactNotification } from '@/lib/mailer';
 
 export async function POST(request: Request) {
   try {
@@ -21,6 +22,13 @@ export async function POST(request: Request) {
         message,
       },
     });
+
+    // Send email notification (non-blocking - doesn't fail if email fails)
+    sendContactNotification({ name, email, phone: phone || null, message })
+      .then((sent) => {
+        if (sent) console.log('Email notification sent for contact:', contact.id);
+      })
+      .catch((err) => console.error('Email notification failed:', err));
 
     return NextResponse.json(
       { success: true, message: 'Mensaje recibido correctamente', id: contact.id },
