@@ -65,7 +65,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="#politica" className="hover:text-[#d32f2f] transition-colors text-gray-500">
+              <Link href="/politica" className="hover:text-[#d32f2f] transition-colors text-gray-500">
                 Política de Datos
               </Link>
             </li>
