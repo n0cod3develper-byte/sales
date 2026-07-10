@@ -153,7 +153,7 @@ export default function Home() {
               <h4 className="font-extrabold text-base md:text-lg tracking-tight" style={{ color: "#1a1a2e" }}>
                 ¿Necesita un producto específico?
               </h4>
-              <p className="text-xs md:text-sm mt-1" style={{ color: "#6b7280" }}>
+              <p className="text-xs md:text-sm mt-1" style={{ color: "#4b5563" }}>
                 Contamos con un amplio inventario y asesoría técnica para ayudarle a encontrar exactamente lo que necesita.
               </p>
             </div>
@@ -177,9 +177,9 @@ export default function Home() {
               <span className="text-[#d32f2f] text-xs font-black tracking-widest uppercase">
                 SOLUCIONES INTEGRALES
               </span>
-              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
                 Respaldo 100% Colombiano
-              </h3>
+              </h2>
               <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
                 Nacimos con la visión de ofrecer un suministro ágil y confiable de repuestos para montacargas en toda Colombia. Atendemos de forma integral a las empresas que confían su operación y logística diaria a equipos de manejo de materiales, garantizando continuidad y rendimiento en cada jornada.
               </p>
@@ -308,7 +308,7 @@ export default function Home() {
                   <h4 className="text-gray-900 font-extrabold text-sm md:text-base tracking-tight leading-snug hover:text-[#d32f2f] transition-colors">
                     <a href="#blog">{item.title}</a>
                   </h4>
-                  <p className="text-gray-500 text-xs leading-relaxed">{item.excerpt}</p>
+                  <p className="leading-relaxed" style={{ fontSize: "0.8rem", color: "#4b5563" }}>{item.excerpt}</p>
                 </div>
                 <div className="p-6 pt-0 border-t border-gray-50 flex items-center justify-between">
                   <a href="#blog" className="text-xs font-black text-[#d32f2f] hover:underline">

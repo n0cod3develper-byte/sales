@@ -78,7 +78,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           className="leading-relaxed mb-5 flex-1"
           style={{
             fontSize: "0.8rem",
-            color: "#6b7280",
+            color: "#4b5563",
             lineHeight: "1.65",
           }}
         >

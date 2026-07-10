@@ -55,11 +55,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es_CO" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
+    <html lang="es-CO" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="antialiased">
         <JsonLdOrganization />
         <JsonLdBreadcrumbList />
-        {children}
+        <main id="main-content">{children}</main>
       </body>
     </html>
   );
