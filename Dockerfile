@@ -7,6 +7,10 @@ RUN npm ci
 
 # Copy source code
 COPY . .
+
+# Generate Prisma Client (needed before build for type-checking and runtime)
+RUN npx prisma generate
+
 # Build the application
 RUN npm run build
 
@@ -17,13 +21,17 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Copy only the necessary files from builder
-COPY --from=builder /app/.next ./.next
+# Standalone output already contains a minimal server + traced node_modules
+COPY --from=builder /app/.next/standalone ./
+
+# Static assets and public files are NOT included in standalone by default
+COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/next.config.ts ./next.config.ts
-COPY --from=builder /app/tsconfig.json ./tsconfig.json
-COPY --from=builder /app/.next/standalone .
+
+# Prisma schema + generated client (safety net in case tracing misses engine binaries)
+COPY --from=builder /app/prisma ./prisma
+COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 
 EXPOSE 3000
 CMD ["node", "server.js"]
