@@ -15,17 +15,28 @@ export default function Home() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate backend request
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error("Error al enviar el mensaje");
       setIsSuccess(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
       setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setError("Ocurrió un error al enviar el mensaje. Intente nuevamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

@@ -3,7 +3,7 @@ import request from "supertest";
 import { createServer } from "http";
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
-import jwt from "jsonwebtoken";
+import { SignJWT } from "jose";
 
 // Import route handlers directly
 import { GET as GET_SERVICES, POST as POST_SERVICES } from "../src/app/api/admin/services/route";
@@ -25,13 +25,19 @@ function invoke(handler: any, method: string, path: string, token: string, userI
 }
 
 const prisma = new PrismaClient();
-const JWT_SECRET = process.env.JWT_SECRET || "test-secret";
+function getJwtSecret(): Uint8Array {
+  const secret = process.env.JWT_SECRET || "test-secret";
+  return new TextEncoder().encode(secret);
+}
 const adminEmail = "ventas@facirepuestos.com.co";
 
 async function getAdminToken() {
   const admin = await prisma.user.findUnique({ where: { email: adminEmail } });
   if (!admin) throw new Error("Admin user missing");
-  return jwt.sign({ id: admin.id, email: admin.email }, JWT_SECRET, { expiresIn: "15m" });
+  return await new SignJWT({ id: admin.id, email: admin.email })
+    .setProtectedHeader({ alg: "HS256" })
+    .setExpirationTime("15m")
+    .sign(getJwtSecret());
 }
 
 describe("Admin API Endpoints", () => {

@@ -21,9 +21,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "FaciRepuestos: Montacargas Repuestos Accesorios",
-  description: "Montacargas, Repuestos y Accesorios en Galera Forkliftec, Panamá. Ofrecemos el mejor servicio técnico, alquiler de montacargas y mantenimientos preventivos/correctivos.",
-  keywords: ["Montacargas", "Repuestos", "Accesorios", "Galera Forkliftec", "Panamá", "Alquiler de Montacargas"],
+  title: {
+    default: "FaciRepuestos S.A.S. — Repuestos para Montacargas en Colombia",
+    template: "%s | FaciRepuestos S.A.S.",
+  },
+  description: "FaciRepuestos S.A.S. es una empresa colombiana especializada en la distribución y comercialización de repuestos, accesorios, llantas industriales, baterías y aditamentos para montacargas de todas las marcas. Atención a industria, logística y minería en todo Colombia.",
+  keywords: ["Repuestos para montacargas", "Montacargas Colombia", "FaciRepuestos", "Repuestos industriales", "Llantas industriales", "Baterías para montacargas", "Accesorios montacargas", "Medellín", "Colombia"],
+  authors: [{ name: "FaciRepuestos S.A.S." }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "FaciRepuestos S.A.S. — Repuestos para Montacargas en Colombia",
+    description: "Distribución y comercialización de repuestos, accesorios, llantas industriales y baterías para montacargas. Atención a industria, logística y minería en Colombia.",
+    url: "https://facirepuestos.com.co",
+    siteName: "FaciRepuestos S.A.S.",
+    locale: "es_CO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FaciRepuestos S.A.S. — Repuestos para Montacargas",
+    description: "Distribución de repuestos, accesorios y llantas industriales para montacargas en Colombia.",
+  },
 };
 
 
@@ -33,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
+    <html lang="es_CO" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
       <body className="antialiased">{children}</body>
     </html>
   );

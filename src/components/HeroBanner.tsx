@@ -67,9 +67,15 @@ export default function HeroBanner() {
                 <span className="inline-block text-[#d32f2f] text-xs md:text-sm font-black tracking-widest uppercase border-l-4 border-[#d32f2f] pl-3">
                   {slide.title}
                 </span>
-                <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                  {slide.subtitle}
-                </h1>
+                {idx === 0 ? (
+                  <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                    {slide.subtitle}
+                  </h1>
+                ) : (
+                  <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                    {slide.subtitle}
+                  </h2>
+                )}
                 <p className="text-sm md:text-base text-gray-300 font-medium leading-relaxed max-w-lg">
                   {slide.desc}
                 </p>
