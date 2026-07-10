@@ -168,50 +168,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Taller Section - Comentado/Oculto
-      <section className="py-20 md:py-28 bg-gray-50 border-y border-gray-100" id="taller">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <span className="text-[#d32f2f] text-xs font-black tracking-widest uppercase">
-                TALLER ESPECIALIZADO
-              </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                Infraestructura y tecnología para reparación mayor
-              </h2>
-              <div className="w-16 h-1 bg-[#d32f2f] rounded"></div>
-              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
-                Contamos con un taller de servicio técnico equipado con herramientas de diagnóstico avanzadas, bahías de reparación y personal especializado listo para realizar desde mantenimientos preventivos rápidos hasta reconstrucciones completas de motores y sistemas hidráulicos.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm text-center">
-                  <Shield className="text-[#d32f2f] mb-2" size={24} />
-                  <span className="font-bold text-gray-800 text-xs">Garantía Real</span>
-                </div>
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm text-center">
-                  <Award className="text-[#d32f2f] mb-2" size={24} />
-                  <span className="font-bold text-gray-800 text-xs">Técnicos Certificados</span>
-                </div>
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm text-center">
-                  <Users className="text-[#d32f2f] mb-2" size={24} />
-                  <span className="font-bold text-gray-800 text-xs">+15 Años Exp.</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://forkliftec.com/public/img/imagenes/60.jpg?1572883233"
-                alt="Taller Forkliftec"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
-
       {/* Who We Are / Nosotros Section */}
       <section className="py-20 md:py-28" id="nosotros">
         <div className="max-w-7xl mx-auto px-4 md:px-8">

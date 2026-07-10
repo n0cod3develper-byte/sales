@@ -175,16 +175,6 @@ export default function Header() {
           </div>
 
           <Link
-            href="#usados"
-            onClick={() => setIsOpen(false)}
-            className="block py-2 text-base font-semibold text-gray-800 hover:text-[#d32f2f]"
-          >
-            Equipos Usados
-          </Link>
-
-
-
-          <Link
             href="#blog"
             onClick={() => setIsOpen(false)}
             className="block py-2 text-base font-semibold text-gray-800 hover:text-[#d32f2f]"
