@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <style>
+    .y { font-family: Arial, sans-serif; font-weight: 900; font-size: 52px; fill: #000; }
+    .bg { fill: #fbb034; }
+  </style>
+  <rect x="0" y="0" width="160" height="60" rx="4" class="bg"/>
+  <text x="25" y="48" class="y">Yale</text>
+</svg>

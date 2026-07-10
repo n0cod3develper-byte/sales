@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <style>
+    .n { font-family: Arial, sans-serif; font-weight: 800; font-size: 38px; fill: #fff; }
+    .bar { fill: #c10016; }
+    .circ { fill: transparent; stroke: #c10016; stroke-width: 6; }
+  </style>
+  <circle cx="100" cy="30" r="24" class="circ"/>
+  <rect x="25" y="18" width="150" height="24" class="bar"/>
+  <text x="35" y="38" class="n">NISSAN</text>
+</svg>

@@ -1,0 +1,52 @@
+# Reconstrucción de FaciRepuestos - Checklist de Tareas
+
+- [x] Inicialización y configuración del proyecto Next.js + Tailwind CSS
+- [x] Creación de datos simulados (servicios, productos, blog, contacto) en `src/lib/data.ts`
+- [x] Creación del sistema de diseño (fuentes, colores corporativos en CSS/Tailwind)
+- [x] Implementación de componentes estructurales de layout:
+  - [x] `TopBar` (información de contacto superior)
+  - [x] `Header` (navegación responsiva con menú móvil)
+  - [x] `Footer` (pie de página completo con enlaces y contacto)
+  - [x] `WhatsAppButton` (botón flotante interactivo)
+- [x] Implementación de secciones y componentes principales de la página:
+  - [x] `HeroBanner` (sección principal atractiva y dinámica)
+  - [x] `Services` (sección de servicios con tarjetas interactivas)
+  - [x] `Products` (sección de repuestos/productos destacados con tarjetas)
+  - [x] `CallToAction` (sección motivacional con fondo/efecto visual)
+  - [x] `AboutUs` (sección "Quiénes Somos" con diseño premium)
+  - [x] `Blog` (sección de artículos con imágenes y resúmenes)
+  - [x] `ContactForm` (formulario de contacto interactivo con validación y simulación de envío)
+- [x] Optimización y Pulido:
+  - [x] Configuración de SEO y metadatos en `layout.tsx`
+  - [x] Optimización de rendimiento (Lighthouse > 95, lazy loading, optimización de fuentes)
+  - [x] Accesibilidad WCAG (etiquetas semánticas, contraste, accesibilidad de teclado)
+  - [x] Pruebas responsive y efectos interactivos (hover, transiciones fluidas)
+
+## 📦 Phase 1 – Infraestructura
+- [ ] **Crear Dockerfile (multi‑stage)**
+  - Base image: `node:20-alpine` for build and production.
+  - Copiar solo `package.json` y `package-lock.json`, instalar dependencias, copiar source, build, expose 3000.
+- [ ] **Crear docker‑compose.yml**
+  - Servicios: `web` (Next.js) y `db` (PostgreSQL).
+  - Variables de entorno: `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB`, `DATABASE_URL`.
+  - Volúmenes persistentes para la base.
+- [ ] **Añadir .env.example**
+  - `DATABASE_URL=postgresql://user:password@db:5432/facirepuestos`
+  - `JWT_SECRET=your-strong-secret`
+  - `NEXT_PUBLIC_API_URL=http://localhost:3000/api`
+- [ ] **Instalar Prisma**
+  - Añadir dependencias `prisma` y `@prisma/client` al `package.json`.
+  - Añadir scripts: `"prisma": "prisma"`, `"prisma:generate": "prisma generate"`, `"prisma:migrate": "prisma migrate dev"`.
+- [ ] **Crear carpeta `prisma/` y archivo `schema.prisma`**
+  - Definir modelo `User`, `Role`, `Permission`, `Service`, `Product`, `Blog`, `Brand`, `ContactMessage`, `Media`, `Settings` (esqueleto mínimo).
+  - Usar provider `postgresql` y datasource `db` con `env("DATABASE_URL")`.
+- [ ] **Actualizar README.md** con instrucciones para desarrollo en Docker y Prisma.
+- [ ] **Configurar ESLint/Prettier** (ya existen) para respetar estilo.
+- [ ] **Commit inicial** (simulado) con los cambios.
+- [ ] **Verificar que `npm run dev` funciona dentro del contenedor** (manual test).
+- [ ] **Implement RBAC schema (already done)**
+- [ ] **Create RBAC helper (`src/lib/rbac.ts`)**
+- [ ] **Build admin API routes (`src/app/api/admin/*`)**
+- [ ] **Develop admin UI (Next.js pages under `/admin`)**
+- [ ] **Write unit & integration tests for RBAC and admin endpoints**
+- [ ] **Update README with admin panel instructions**

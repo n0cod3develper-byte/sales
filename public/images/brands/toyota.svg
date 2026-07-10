@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <style>
+    .t { font-family: Arial, sans-serif; font-weight: 900; font-size: 42px; fill: #cc0000; }
+  </style>
+  <text x="20" y="45" class="t">TOYOTA</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f2f5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8eaed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hose1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2d44;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d0d0d0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a8a8a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0c0c0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Subtle grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d0d0d0" stroke-width="0.5" opacity="0.3"/>
+  </pattern>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Hydraulic hose 1 - curved -->
+  <path d="M 150 450 Q 200 200 400 250 T 650 180" stroke="url(#hose1)" stroke-width="28" fill="none" stroke-linecap="round"/>
+  <path d="M 150 450 Q 200 200 400 250 T 650 180" stroke="#2a2a40" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <!-- Braided texture lines -->
+  <path d="M 150 450 Q 200 200 400 250 T 650 180" stroke="rgba(255,255,255,0.08)" stroke-width="18" fill="none" stroke-linecap="round" stroke-dasharray="4 8"/>
+  
+  <!-- Hydraulic hose 2 -->
+  <path d="M 120 350 Q 300 400 450 320 T 700 350" stroke="#333" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <path d="M 120 350 Q 300 400 450 320 T 700 350" stroke="#444" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M 120 350 Q 300 400 450 320 T 700 350" stroke="rgba(255,255,255,0.06)" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="3 6"/>
+  
+  <!-- Connector fitting 1 -->
+  <rect x="120" y="430" width="60" height="40" rx="4" fill="url(#metal)" stroke="#999" stroke-width="1"/>
+  <rect x="130" y="435" width="40" height="10" rx="2" fill="#b8b8b8"/>
+  <circle cx="150" cy="460" r="6" fill="#999" stroke="#888" stroke-width="1"/>
+  
+  <!-- Connector fitting 2 -->
+  <rect x="630" y="160" width="50" height="35" rx="4" fill="url(#metal)" stroke="#999" stroke-width="1"/>
+  <rect x="638" y="165" width="34" height="8" rx="2" fill="#b8b8b8"/>
+  <circle cx="655" cy="183" r="5" fill="#999" stroke="#888" stroke-width="1"/>
+  
+  <!-- Connector fitting 3 -->
+  <rect x="90" y="332" width="55" height="35" rx="4" fill="url(#metal)" stroke="#999" stroke-width="1"/>
+  <rect x="680" y="332" width="50" height="35" rx="4" fill="url(#metal)" stroke="#999" stroke-width="1"/>
+  
+  <!-- Small parts scattered -->
+  <!-- O-ring -->
+  <circle cx="350" cy="480" r="18" fill="none" stroke="#1a1a2e" stroke-width="8"/>
+  <circle cx="350" cy="480" r="18" fill="none" stroke="#2a2a40" stroke-width="5"/>
+  
+  <!-- Coupling -->
+  <rect x="450" y="460" width="45" height="25" rx="5" fill="url(#metal)" stroke="#999" stroke-width="1"/>
+  <rect x="495" y="465" width="20" height="15" rx="3" fill="#c0c0c0" stroke="#aaa" stroke-width="1"/>
+  
+  <!-- Hex nut -->
+  <polygon points="580,490 595,480 615,480 625,490 615,500 595,500" fill="url(#metal)" stroke="#999" stroke-width="1"/>
+  <circle cx="605" cy="490" r="6" fill="#b8b8b8" stroke="#aaa" stroke-width="1"/>
+  
+  <!-- Small adapter -->
+  <rect x="250" y="500" width="35" height="18" rx="4" fill="#b0b0b0" stroke="#999" stroke-width="1"/>
+  <rect x="285" y="503" width="15" height="12" rx="2" fill="#c8c8c8" stroke="#aaa" stroke-width="1"/>
+</svg>

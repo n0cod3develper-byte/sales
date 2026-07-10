@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <style>
+    .c { font-family: Arial, sans-serif; font-weight: 900; font-size: 52px; fill: #000; letter-spacing: -2px; }
+    .tri { fill: #ffb612; }
+  </style>
+  <polygon points="65,40 100,5 135,40" class="tri"/>
+  <text x="50" y="48" class="c">CAT</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <style>
+    .s { font-family: Arial, sans-serif; font-weight: 900; font-size: 46px; fill: #fff; }
+    .bg { fill: #ef7c00; }
+  </style>
+  <rect x="0" y="0" width="160" height="60" rx="8" class="bg"/>
+  <text x="15" y="45" class="s">STILL</text>
+</svg>
